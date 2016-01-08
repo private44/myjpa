@@ -26,17 +26,26 @@ public class Employee implements Serializable {
 
     @Column(name = "last_name")
     private String lastName;
-    
+
     @Temporal(TemporalType.DATE)
     @Column(name = "birth_date")
     private Date birthDate;
-    
+
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "active")
+    private boolean active;
+
     @Transient
     private int salary;
 
     public Employee() {
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -75,5 +84,29 @@ public class Employee implements Serializable {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
