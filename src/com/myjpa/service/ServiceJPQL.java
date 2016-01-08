@@ -29,12 +29,18 @@ public class ServiceJPQL {
         EM.getTransaction().commit();
     }
     
-    public static void getAllBooks(){
+    public static void getAllEmployees(){
         Query query = EM.createQuery("select e from Employee e");
         List<Employee> results = query.getResultList();
         
         for(Employee employee : results){
             System.out.println("First Name: " + employee.getFirstName());
         }
+    }
+    
+    public static void getTotalEmployees(){
+        Query query = EM.createQuery("select count(e) from Employee e");
+        Long result = (Long) query.getSingleResult();
+        System.out.println("Total employee: " + result); 
     }
 }
