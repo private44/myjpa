@@ -1,12 +1,16 @@
 package com.myjpa.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "employee")
@@ -22,6 +26,13 @@ public class Employee implements Serializable {
 
     @Column(name = "last_name")
     private String lastName;
+    
+    @Temporal(TemporalType.DATE)
+    @Column(name = "birth_date")
+    private Date birthDate;
+    
+    @Transient
+    private int salary;
 
     public Employee() {
     }
@@ -50,4 +61,19 @@ public class Employee implements Serializable {
         this.lastName = lastName;
     }
 
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
