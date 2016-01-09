@@ -6,4 +6,5 @@ build.xml
 manifest.mf
 
 src/com/myjpa/app/*
+src/META-INF/* 
 
