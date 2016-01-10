@@ -24,7 +24,8 @@ public class ServiceJPQL {
         employee.setGender(gender);
         employee.setActive(active);
 
-        //transaction in JavaSE    
+        //transaction in JavaSE
+        //transaction in JavaSE   
         EM.getTransaction().begin();
         EM.persist(employee);
         EM.getTransaction().commit();
