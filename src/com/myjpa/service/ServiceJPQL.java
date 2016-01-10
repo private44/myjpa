@@ -21,7 +21,7 @@ public class ServiceJPQL {
         employee.setLastName(lastName);
         employee.setBirthDate(birthDate);
         employee.setCity(city);
-        employee.setGender(gender);
+        employee.setGender(gender);  
         employee.setActive(active);
         
         EM.getTransaction().begin();
