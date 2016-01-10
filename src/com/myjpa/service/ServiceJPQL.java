@@ -43,4 +43,8 @@ public class ServiceJPQL {
         Long result = (Long) query.getSingleResult();
         System.out.println("Total employee: " + result); 
     }
+    
+    public static void getColumnEmployee(){
+       
+    }
 }
