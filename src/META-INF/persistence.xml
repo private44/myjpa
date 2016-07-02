@@ -9,7 +9,7 @@
       <property name="javax.persistence.jdbc.password" value="free"/>
       <property name="javax.persistence.jdbc.user" value="system"/>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
-      <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+      <<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>>
     </properties>
   </persistence-unit>
   <!--<persistence-unit name="DBPostgreSQL" transaction-type="RESOURCE_LOCAL">

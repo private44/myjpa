@@ -29,7 +29,7 @@ public class Employee implements Serializable {
 
     @Temporal(TemporalType.TIME)
     @Column(name = "birth_date")
-    private Date birthDate
+    private Date birthDate;
 
     @Column(name = "city")
     private String city;
